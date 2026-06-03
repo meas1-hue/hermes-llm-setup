@@ -22,7 +22,7 @@ ExecStart=/home/christisking/ik_llama_cpp/build/bin/llama-server \
   -b 4096 -ub 512 \
   --n-gpu-layers 999 --n-cpu-moe 27 \
   --parallel 1 --numa isolate \
-  --timeout 0
+  --jinja
 MemoryHigh=18G
 MemorySwapMax=0
 ExecStartPost=-/usr/bin/python3 /home/christisking/.hermes/expert-warmer.py --top 32
